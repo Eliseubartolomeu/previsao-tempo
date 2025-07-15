@@ -21,41 +21,6 @@ function Header() {
     };
   }, []);
 
-  //Chamando o menu  mobile
-  useEffect(() => {
-    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle') as HTMLElement | null;
-    const body = document.querySelector('body');
-
-    function mobileNavToggle() {
-      body?.classList.toggle('mobile-nav-active');
-      mobileNavToggleBtn?.classList.toggle('bi-list');
-      mobileNavToggleBtn?.classList.toggle('bi-x');
-    }
-
-    if (mobileNavToggleBtn) {
-      mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
-    }
-
-    const navLinks = document.querySelectorAll('#navmenu a');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        if (body?.classList.contains('mobile-nav-active')) {
-          mobileNavToggle();
-        }
-      });
-    });
-
-    return () => {
-      if (mobileNavToggleBtn) {
-        mobileNavToggleBtn.removeEventListener('click', mobileNavToggle);
-      }
-
-      navLinks.forEach((link) => {
-        link.removeEventListener('click', mobileNavToggle);
-      });
-    };
-  }, []);
-
   return (
     <header
       id="header"
@@ -66,17 +31,7 @@ function Header() {
           <h1 className="sitename">ElisTime</h1>
         </a>
 
-        <nav id="navmenu" className="navmenu">
-          <ul>
-            <li><a href="#inicio" className="active">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-          </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-        <a href="#" className='btn btn-primary'>Entrar</a>
-        <a href="#" className='btn border-primary'>Registrar-se</a>
       </div>
-      <div className='bg-header'></div>
     </header>
   );
 }
