@@ -1,26 +1,25 @@
-$color-main: red;
-$color-main-gradient: linear-gradient(45deg, #7223cf, #da2eb8);
 $font-size-main: 16px;
 $menu-link-color: #7223cf;
-$bg-main: #2976b8!important;
+$bg-main: linear-gradient(95deg, #1b042a 0%, #390560 50%, #490863 100%);
 
 
 :root{
-    --default-color:#ffffff;
-    --home-title-color: green;
-    --title-color: #ffffff;
-    --surface-colo-r: #ffffff;
-    --heading-color: #ffffff;
-    --contrast-color: #ffffff;
-    --accent-color: orange;
-    --accent-color-rgb: 13, 131, 253;
-    --white-bg-rgb: 255,255,255;
+    /*Cores para navegação*/
     --nav-color: #ffffff;
+    --nav-hover-color: #da2eb8;
     --nav-font: "Inter",  sans-serif;
-    --nav-hover-color: orange;
-    --nav-mobile-background-color: #2976b8!important;
-    --card-bg-color: yellow;
-    --card-container-bg-color: red; 
-    --card-icon-bg: #2976b8!important;
-    --card-hover-bg-color: #2BDEFD;
+    --nav-mobile-background-color: #390560!important;
+    /*Cores geral*/
+    --default-text-color: #ffffff;
+    --active-color: #da2eb8;
+    --heading-color: #ffffff;
+    --footer-bg: #1b042a;
+    --card-bg-color: #390560;
+    --card-icon-bg: #ffffff;
+
+
+
+
+
+
 }
