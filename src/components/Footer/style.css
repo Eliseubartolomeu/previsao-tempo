@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.footer {
+    color: var(--default-color);
+    background-color: rgba(var(--white-bg-rgb),0.8);
+    font-size: 14px;
+    padding: 20px 0;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+
+  }
+  
+  .footer .copyright p {
+    margin-bottom: 0;
+  }
+  
+  
+  

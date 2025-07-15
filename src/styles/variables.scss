@@ -1,0 +1,26 @@
+$color-main: red;
+$color-main-gradient: linear-gradient(45deg, #7223cf, #da2eb8);
+$font-size-main: 16px;
+$menu-link-color: #7223cf;
+$bg-main: #2976b8!important;
+
+
+:root{
+    --default-color:#ffffff;
+    --home-title-color: green;
+    --title-color: #ffffff;
+    --surface-colo-r: #ffffff;
+    --heading-color: #ffffff;
+    --contrast-color: #ffffff;
+    --accent-color: orange;
+    --accent-color-rgb: 13, 131, 253;
+    --white-bg-rgb: 255,255,255;
+    --nav-color: #ffffff;
+    --nav-font: "Inter",  sans-serif;
+    --nav-hover-color: orange;
+    --nav-mobile-background-color: #2976b8!important;
+    --card-bg-color: yellow;
+    --card-container-bg-color: red; 
+    --card-icon-bg: #2976b8!important;
+    --card-hover-bg-color: #2BDEFD;
+}
