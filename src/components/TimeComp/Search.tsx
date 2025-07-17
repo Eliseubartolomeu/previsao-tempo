@@ -1,11 +1,10 @@
 export function Search() {
     return(
-        <div className="row align-items-center mb-4">
-            <div className="col-lg-12">
-                <div className="search-area">
-                    Search area
-                </div>
-            </div>
-        </div>
+        <header>
+            <form className="d-flex" role="search">
+            <input className="form-control" type="text" placeholder="Buscar cidade..." aria-label="Buscar cidade"/>
+            <button className="btn btn-light" type="submit">Buscar</button>
+            </form>
+        </header>
     )
 }

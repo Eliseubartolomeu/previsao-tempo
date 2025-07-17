@@ -1,9 +1,8 @@
-import Header from "../components/Header/Header";
+import { Link } from "react-router-dom";
 
 export function Welcome() {
     return(
         <main>
-            <Header/>
             <div className='app-main container'>
                 <section id="inicio" className="home-title section">
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -31,9 +30,9 @@ export function Welcome() {
                                 <div className="goto-timepage mt-4">
                                     <div className='btn-area'>
 
-                                        <a href="#sobre" className="link-time-main"><span>Pesquisar cidade</span><i className="bi bi-arrow-right"></i></a>
+                                        <Link to='/ver-tempo' className="link-time link-time-main"><span>Começar</span><i className="bi bi-arrow-right"></i></Link>
 
-                                        <a href="#sobre" className="link-time-secondary"><span>Pesquisar cidade</span><i className="bi bi-arrow-right"></i></a>
+                                        <Link to='/ver-tempo' className="link-time link-time-secondary"><span>Começar</span><i className="bi bi-arrow-right"></i></Link>
                                     </div>
                                 </div>
 
