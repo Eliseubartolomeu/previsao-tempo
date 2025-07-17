@@ -9,6 +9,37 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
+.welcome-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  color: white;
+
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn-main {
+  background-color: #6f52c2;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+.btn-main:hover {
+  background-color: #5c42a7;
+}
+
 .container-custom {
   width: 100%;
   max-width: 1200px;

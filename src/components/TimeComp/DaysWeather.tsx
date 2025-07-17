@@ -1,36 +1,3 @@
-const daysItems = [
-    {
-        day: 'Amanhã',
-        img: 'bi bi-brightness-high',
-        maxTemp: '21oC',
-        minTemp: '16oC'
-    },
-    {
-        day: 'Sexta feira',
-        img: 'bi bi-brightness-high',
-        maxTemp: '28oC',
-        minTemp: '20oC'
-    },
-    {
-        day: 'Sabádo',
-        img: 'bi bi-brightness-high',
-        maxTemp: '25oC',
-        minTemp: '21oC'
-    },
-    {
-        day: 'Domingo',
-        img: 'bi bi-brightness-high',
-        maxTemp: '20oC',
-        minTemp: '14oC'
-    },
-    {
-        day: 'Segunda-feira',
-        img: 'bi bi-brightness-high',
-        maxTemp: '24oC',
-        minTemp: '18oC'
-    },
-]
-
 export function DaysWeather() {
     return(
         <div className="col-12">

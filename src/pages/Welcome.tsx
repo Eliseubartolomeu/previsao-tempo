@@ -2,45 +2,10 @@ import { Link } from "react-router-dom";
 
 export function Welcome() {
     return(
-        <main>
-            <div className='app-main container'>
-                <section id="inicio" className="home-title section">
-                    <div className="container" data-aos="fade-up" data-aos-delay="100">
-                        <div className="row ">
-                            <div className="col-lg-6">
-                                <h2 className="text-center">Acompanhe a variação do tempo conosco</h2>
-                                <div>
-                                    <p className="text mb-4">O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo
-                                    O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo.
-
-                                    O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo
-
-                                    O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo
-
-                                    O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo
-
-                                    O ElisTime é um sistema que ajuda Você a saber sobre como está o clima em qualquer cidade do mundo
-                                    </p>
-                                </div>
-                            </div> 
-                            <div className="col-lg-6">
-                                <div className="shape-area">
-                                    <div className="shape-1"></div>
-                                </div>
-                                <div className="goto-timepage mt-4">
-                                    <div className='btn-area'>
-
-                                        <Link to='/ver-tempo' className="link-time link-time-main"><span>Começar</span><i className="bi bi-arrow-right"></i></Link>
-
-                                        <Link to='/ver-tempo' className="link-time link-time-secondary"><span>Começar</span><i className="bi bi-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
+        <div className="welcome-container">
+            <h1>Bem-vindo ao ElisTime</h1>
+            <p>Descubra a previsão do tempo para qualquer cidade do mundo.<br/>Confira informações detalhadas de temperatura, vento, umidade e muito mais!</p>
+            <Link to='/ver-tempo' className="btn btn-main">Começar</Link>
+        </div>
     )
 }

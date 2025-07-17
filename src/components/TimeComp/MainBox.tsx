@@ -1,26 +1,4 @@
- 
-  const timeCards = [
-    {
-      icon: 'bi bi-brightness-high',
-      title: 'Vento',
-      number: 17,
-      speed: 'Km/h',
-    },
-    {
-        icon: 'bi bi-brightness-high',
-        title: 'Umidade',
-        number: 31,
-        speed: '%',
-    },
-    {
-        icon: 'bi bi-brightness-high',
-        title: 'Chuva',
-        number: 10,
-        speed: '%',
-    }
-  ];
-
-export function MainBox() {
+ export function MainBox() {
     return(
       <div className="left-column">
         <div className="card-temperature">
