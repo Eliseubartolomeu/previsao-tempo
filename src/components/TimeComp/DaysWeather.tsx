@@ -1,35 +1,32 @@
-export function DaysWeather() {
-    return(
-        <div className="col-12">
-            <div className="card">
-              <div className="d-flex justify-content-around flex-wrap">
-                <div className="forecast-day">
-                  <div>Amanhã</div>
-                  <img src="cloud.png" alt="nublado"/>
-                  <div>21° 16°</div>
-                </div>
-                <div className="forecast-day">
-                  <div>Sexta-Feira</div>
-                  <img src="sun.png" alt="sol"/>
-                  <div>28° 20°</div>
-                </div>
-                <div className="forecast-day">
-                  <div>Sábado</div>
-                  <img src="rain.png" alt="chuva"/>
-                  <div>25° 21°</div>
-                </div>
-                <div className="forecast-day">
-                  <div>Domingo</div>
-                  <img src="storm.png" alt="trovoada"/>
-                  <div>20° 14°</div>
-                </div>
-                <div className="forecast-day">
-                  <div>Segunda-Feira</div>
-                  <img src="partly-cloudy-day.png" alt="nublado com sol"/>
-                  <div>24° 18°</div>
-                </div>
+interface DaysWeatherProps {
+  data: any[];
+}
+
+export function DaysWeather({ data }: DaysWeatherProps) {
+  return (
+    <div className="col-12">
+      <div className="app-card d-flex justify-content-around flex-wrap">
+        {data.map((day, index) => {
+          const date = new Date(day.dt * 1000);
+          const dayName = date.toLocaleDateString("pt", {
+            weekday: "long",
+            day: "2-digit",
+          });
+
+          return (
+            <div key={index} className="forecast-day text-center">
+              <div>{dayName}</div>
+              <img
+                src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+                alt={day.weather[0].description}
+              />
+              <div>
+                {Math.round(day.main.temp_max)}° / {Math.round(day.main.temp_min)}°
               </div>
             </div>
-          </div>
-    )
+          );
+        })}
+      </div>
+    </div>
+  );
 }

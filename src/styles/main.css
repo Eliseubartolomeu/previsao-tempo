@@ -1,26 +1,44 @@
-body {
+@import url('./variables.scss');  
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.app-body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #9472f0, #b9a1f6);
-  color: white;
+  background: var(--bg-body);
+  color: var(--default-text-color);
   display: flex;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .welcome-container {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg-color);
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   max-width: 700px;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   text-align: center;
-  color: white;
+  color: var(--default-text-color);
 
 }
+
+.emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -30,8 +48,10 @@ p {
   margin-bottom: 2rem;
 }
 .btn-main {
-  background-color: #6f52c2;
+  background-color: var(--btn-bg);
   border: none;
+  color: var(--default-text-color);
+  text-decoration: none;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
   border-radius: 10px;
@@ -41,75 +61,89 @@ p {
 }
 
 .container-custom {
+  min-height: 100vh;
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem 1rem;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
 }
+
 header {
-width: 100%;
-background-color: #6f52c2;
-padding: 1.5rem 2rem;
-border-radius: 0 0 20px 20px;
-margin-bottom: 2rem;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: var(--btn-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.btn-back{
+  position: absolute;
+  top: -10px;
+  left: 0;
 }
 
 header form {
-display: flex;
-justify-content: center;
-gap: 0.75rem;
-max-width: 600px;
-margin: 0 auto;
-background: rgba(255, 255, 255, 0.1);
-padding: 0.5rem;
-border-radius: 12px;
-backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
 }
 
 header input[type="text"] {
-flex-grow: 1;
-border: none;
-border-radius: 8px;
-padding: 0.6rem 1rem;
-font-size: 1rem;
-background: rgba(255, 255, 255, 0.2);
-color: white;
-outline: none;
-transition: all 0.3s ease;
+  flex-grow: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--default-text-color);
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 header input[type="text"]::placeholder {
-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 header input[type="text"]:focus {
-background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 header button {
-background-color: #ffffff;
-color: #6f52c2;
-border: none;
-padding: 0.6rem 1rem;
-border-radius: 8px;
-font-weight: 600;
-transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: var(--btn-bg);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 header button:hover {
-background-color: #e9e6ff;
+  background-color: #e9e6ff;
 }
 
-.card {
-  background: #8266d4;
+.app-card {
+  background: var(--card-bg-color);
   border: none;
   border-radius: 20px;
   padding: 1.5rem;
-  color: white;
+  color: var(--default-text-color);
 }
 .card-temperature {
-  background: #8266d4;
+  background: var(--card-bg-color);
   position: relative;
+  color: var(--default-text-color);
   border-radius: 20px;
   padding: 2rem;
   overflow: hidden;
@@ -120,6 +154,13 @@ background-color: #e9e6ff;
   align-items: center;
   text-align: center;
 }
+
+@media (max-width: 767px) {
+  .card-temperature{
+    margin-bottom: 20px;
+  }
+}
+
 .card-temperature .temperature-main {
   font-size: 4.5rem;
   font-weight: bold;
@@ -142,7 +183,7 @@ background-color: #e9e6ff;
 .cloud-icon {
   position: absolute;
   top: 1.2rem;
-  left: -20px;
+  left: 0;
   width: 70px;
   opacity: 0.85;
   z-index: 3;
@@ -153,31 +194,31 @@ background-color: #e9e6ff;
   left: 0;
   width: 100%;
   height: 40%;
-  background: linear-gradient(to top, #9472f0 40%, transparent);
+  background: linear-gradient(to top, #9472f0, transparent);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 0;
 }
 .info-boxes {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 1rem;
-margin-top: 2rem;
-z-index: 2;
-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  z-index: 2;
+  width: 100%;
 }
 .info-card {
-background: rgba(255, 255, 255, 0.1);
-border-radius: 12px;
-padding: 0.8rem;
-font-size: 0.9rem;
-min-width: 80px;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-z-index: 2;
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
 }
 .info-card img {
   width: 24px;
@@ -203,6 +244,7 @@ z-index: 2;
   background: yellow;
   border-radius: 50%;
 }
+
 @media (min-width: 768px) {
   .layout {
     display: flex;
