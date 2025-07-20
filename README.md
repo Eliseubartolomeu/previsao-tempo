@@ -126,9 +126,8 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 
 ## Considerações
 
-```bash
-Não se esqueça de deixa um star no repositório e me seguir 😅
-```
 
-Estamos juntos Dev
+Não se esqueça de deixa um star ⭐ no repositório e me seguir 😅
+
+Estamos juntos...
 

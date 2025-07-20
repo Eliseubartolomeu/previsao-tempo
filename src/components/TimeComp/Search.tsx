@@ -25,7 +25,7 @@ export function Search({ onSearch }: SearchProps) {
       <form className="d-flex" onSubmit={handleSearch}>
         <input
           ref={inputRef}
-          className="form-control"
+          className="form-control-search"
           type="text"
           placeholder="Buscar cidade..."
           aria-label="Buscar cidade"

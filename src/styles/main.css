@@ -50,14 +50,15 @@ p {
 .btn-main {
   background-color: var(--btn-bg);
   border: none;
-  color: var(--default-text-color);
+  color: #ffffff;
   text-decoration: none;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
+  transition: all 0.2s ease;
   border-radius: 10px;
 }
 .btn-main:hover {
-  background-color: #5c42a7;
+  background-color: #d0e9ff;
 }
 
 .container-custom {
@@ -73,64 +74,69 @@ p {
 
 header {
   width: 100%;
-  background-color: var(--btn-bg);
   padding: 1.5rem 2rem;
   border-radius: 0 0 20px 20px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--header-bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  gap: 16px;
+  border-radius: 0 0 12px 12px;
   position: relative;
 }
 
-.btn-back{
-  position: absolute;
-  top: -10px;
-  left: 0;
+.btn-back .btn {
+  background-color: #e6f2ff;
+  color: #4da6ff;
+  border: 1px solid #b3d9ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-header form {
+.btn-back .btn:hover {
+  background-color: #d0e9ff;
+}
+
+form.d-flex {
   display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  max-width: 600px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-}
-
-header input[type="text"] {
+  gap: 8px;
   flex-grow: 1;
-  border: none;
+  max-width: 500px;
+}
+
+input.form-control-search {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #b3d9ff;
   border-radius: 8px;
-  padding: 0.6rem 1rem;
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--default-text-color);
   outline: none;
-  transition: all 0.3s ease;
-}
-
-header input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-header input[type="text"]:focus {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-header button {
   background-color: #ffffff;
-  color: var(--btn-bg);
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  color: #333333;
 }
 
-header button:hover {
-  background-color: #e9e6ff;
+input.form-control-search::placeholder {
+  color: #888888;
+}
+
+button.btn {
+  background-color: #4da6ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #3399ff;
 }
 
 .app-card {
@@ -139,7 +145,9 @@ header button:hover {
   border-radius: 20px;
   padding: 1.5rem;
   color: var(--default-text-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .card-temperature {
   background: var(--card-bg-color);
   position: relative;
@@ -172,12 +180,12 @@ header button:hover {
   z-index: 2;
 }
 .card-temperature .location {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--default-text-color);
   font-size: 1rem;
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   z-index: 2;
 }
 .cloud-icon {
@@ -194,7 +202,7 @@ header button:hover {
   left: 0;
   width: 100%;
   height: 40%;
-  background: linear-gradient(to top, #9472f0, transparent);
+  background: linear-gradient(to top, #4da6ff, transparent);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: 0;
@@ -209,7 +217,7 @@ header button:hover {
   width: 100%;
 }
 .info-card {
-  background: var(--card-bg-color);
+  background: linear-gradient(to top, #4da6ff, transparent);
   border-radius: 12px;
   padding: 0.8rem;
   font-size: 0.9rem;

@@ -6,7 +6,8 @@ export function Welcome() {
             <div className="welcome-container">
                 <div className="emoji">⛅</div>
                 <h1>Bem-vindo ao ElisTime</h1>
-                <p>Descubra a previsão do tempo para qualquer cidade do mundo.<br/>Confira informações detalhadas de temperatura, vento, umidade e muito mais!</p>
+                <p>Explore a previsão do tempo de forma fácil e precisa, para qualquer cidade do mundo.
+                Acesse dados atualizados sobre temperatura, vento, umidade e muito mais — tudo em um só lugar, pensado para você se planejar melhor, onde quer que esteja.</p>
                 <Link to='/ver-tempo' className="btn-main">Começar</Link>
             </div>
         </div>
