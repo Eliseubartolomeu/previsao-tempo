@@ -1,6 +1,6 @@
 # 🌦️ ElisTime — Previsão do Tempo
 
-Este é um projeto de previsão do tempo desenvolvido em **React**. Ele permite que os usuários consultem as condições climáticas de diferentes localidades em tempo real de forma prática e visualmente agradável.
+Este é um projeto de previsão do tempo desenvolvido em **React**, Focado na consulta de previsões meteorológicas em tempo real, com integração a uma API externa. O projeto oferece funcionalidades como pesquisa por cidade, exibição das condições climáticas atuais, previsão estendida para 5 dias e informações detalhadas de temperatura, umidade, vento, além dos horários de nascer e pôr do sol.
 
 ## 📸 Capturas de Tela
 
