@@ -29,6 +29,9 @@ A aplicação também é totalmente responsiva para dispositivos móveis:
 | ![Boas-vindas Mobile](./public/welcomeMobile.png) | ![Time Mobile](./public/timeMobile.png) |
 
 
+## 📜 Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
 ## ✨ Funcionalidades
 
 - 🔍 Consulta de previsão do tempo por cidade.
