@@ -129,8 +129,7 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 
 ## Considerações
 
-
-Não se esqueça de deixa um star ⭐ no repositório e me seguir 😅
+Se o projecto for significar alguma coisa deixa um star ⭐ no repositório
 
 Estamos juntos...
 
